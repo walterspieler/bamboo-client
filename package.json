@@ -9,8 +9,13 @@
     "test:unit": "vue-cli-service test:unit"
   },
   "dependencies": {
+    "axios": "^0.19.0",
     "core-js": "^2.6.5",
+    "element-ui": "^2.12.0",
+    "jwt-decode": "^2.2.0",
+    "moment": "^2.24.0",
     "vue": "^2.6.10",
+    "vue-axios": "^2.1.5",
     "vue-router": "^3.0.3",
     "vuex": "^3.0.1"
   },
@@ -24,10 +29,14 @@
     "babel-core": "7.0.0-bridge.0",
     "babel-eslint": "^10.0.1",
     "babel-jest": "^23.6.0",
+    "element-theme-chalk": "^2.12.0",
     "eslint": "^5.16.0",
-    "eslint-plugin-prettier": "^3.1.0",
+    "eslint-config-prettier": "^6.4.0",
+    "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-vue": "^5.0.0",
+    "node-sass": "^4.12.0",
     "prettier": "^1.18.2",
+    "sass-loader": "^8.0.0",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
@@ -37,9 +46,13 @@
     },
     "extends": [
       "plugin:vue/essential",
+      "plugin:prettier/recommended",
+      "eslint:recommended",
       "@vue/prettier"
     ],
-    "rules": {},
+    "rules": {
+      "vue/html-self-closing": "off"
+    },
     "parserOptions": {
       "parser": "babel-eslint"
     },

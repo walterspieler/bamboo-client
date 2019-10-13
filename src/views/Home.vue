@@ -1,18 +1,34 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <el-card>
+      <div slot="header">
+        <img alt="Home" src="../assets/logo-02.png" />
+      </div>
+      <Home msg="Protect your phone from 1€ a week!" />
+      <router-link to="/sign-up">
+        <el-button round>Start now</el-button>
+      </router-link>
+    </el-card>
+    <p>You already have an account?</p>
+    <router-link to="/login" round>
+      <el-button round>Login now</el-button>
+    </router-link>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import Home from "@/components/Home.vue";
 
 export default {
   name: "home",
   components: {
-    HelloWorld
+    Home
   }
 };
 </script>
+
+<style scoped>
+img {
+  width: 350px;
+}
+</style>
