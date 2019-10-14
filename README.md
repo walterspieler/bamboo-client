@@ -1,3 +1,5 @@
+[![CircleCI](https://circleci.com/gh/walterspieler/bamboo-client.svg?style=svg)](https://circleci.com/gh/walterspieler/bamboo-client)
+
 # bamboo-client
 
 ## Project setup
