@@ -24,7 +24,7 @@
           >
         </el-form>
       </div>
-      <el-alert v-if="err" :title="err" type="error" show-icon> </el-alert>
+      <el-alert v-if="err" :title="err" type="error" show-icon></el-alert>
     </el-card>
   </div>
 </template>

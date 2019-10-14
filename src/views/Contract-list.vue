@@ -1,11 +1,19 @@
 <template>
   <div class="home">
-    <div
-      class="contract-container"
-      v-for="contract in contracts"
-      :key="contract._id"
-    >
-      <ContractItem :contract="contract" @unsubscribe="removeContract" />
+    <div v-if="contracts.length > 0">
+      <div
+        class="contract-container"
+        v-for="contract in contracts"
+        :key="contract._id"
+      >
+        <ContractItem :contract="contract" @unsubscribe="removeContract" />
+      </div>
+    </div>
+    <div v-else>
+      <p>No contracts to display. Please subscribe to a contract:</p>
+      <router-link to="/our-products" round>
+        <el-button round>View our products</el-button>
+      </router-link>
     </div>
   </div>
 </template>
